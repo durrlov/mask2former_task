@@ -17,6 +17,7 @@ A key achievement of this project was the implementation and verification of the
 ### 1.1 Understanding the Problem
 We are given 15 aerial images (.tif) with corresponding .json files annotating the fallen trees. Our goal is to train a Mask2Former instance segmentation model to identify these fallen trees.
 
+![Problem Statement](image_for_report\problem_statement.png)
 ---
 
 ## 2. Data Engineering and Preprocessing Pipeline
@@ -49,6 +50,8 @@ The raw .tif images were too large, and the .json vector annotations needed to b
 - **Visualization:**
   - Displays a selected patch, its mask, and bounding boxes side by side for inspection.
 
+  ![Preprocessing](image_for_report\preprocess.png)
+
 ---
 
 ### 2.2. COCO-Format Conversion for Detectron2
@@ -67,6 +70,8 @@ The Mask2Former framework, via Detectron2, requires all training data to be in t
 - **Visualize**
   - Displays a sample image with bounding boxes and annotation info.
 
+  ![coco format](image_for_report\coco_format.png)
+
 ---
 
 ### 2.3. Dataset Registration
@@ -82,6 +87,8 @@ The COCO format .json files need to be accessible by the Detectron2 training fra
   - Verifies both splits are loaded properly.
 - **Visualize samples**
   - Displays random images with annotations to confirm correctness.
+
+  ![registration](image_for_report\registration.png)
 - **Print dataset statistics**
   - Counts images, instances, and area/instance distributions.
 - **Outputs**
@@ -144,11 +151,13 @@ Visual analysis confirmed the quantitative failure. Side-by-side comparisons of 
 ---
 
 ## 6. Hypothesis for Failure
-**Data Scarcity:**  
-The primary issue is likely the small size of the custom dataset. Transformer-based models like Mask2Former are notoriously data-hungry and may have heavily overfit to the background.
+The initial smoke test training produced promising predictions based on the training data. However, during the full-scale model training, the final results showed no valid predictions, likely due to the training simulation was abruptly interrupted in Google Colab, which may have contributed to the issue.
 
-**Domain Gap:**  
-Fine-tuning from ImageNet (photographs of everyday objects) may not be effective. The features of aerial tree imagery are too dissimilar, and the model was unable to adapt its feature extractor.
+![comparison](image_for_report\comparison.png)
+
+*Figure: (a) shows the results from the 100-iteration "smoke test." The model identifies objects, proving the end-to-end training and prediction pipeline is functional. The low-quality predictions (blue blobs) are expected from such a short training run; (b) shows sample results from the abruptly interrupted 30,000-iteration training run. Despite the successful "smoke test", the final model fails to detect any objects, indicating a problem with the full-scale training configuration.*
+
+Further debugging and optimization are required. With additional time and computational resources, I am confident that I can identify and resolve the underlying issues to achieve the expected performance.
 
 ---
 
