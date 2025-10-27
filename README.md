@@ -17,7 +17,7 @@ A key achievement of this project was the implementation and verification of the
 ### 1.1 Understanding the Problem
 We are given 15 aerial images (.tif) with corresponding .json files annotating the fallen trees. Our goal is to train a Mask2Former instance segmentation model to identify these fallen trees.
 
-![Problem Statement](image_for_report/problem_statement.png)
+![Problem Statement](image_for_report/problem_state.png)
 ---
 
 ## 2. Data Engineering and Preprocessing Pipeline
