@@ -5,7 +5,8 @@
 **Date:** October 27, 2025  
 
 ---
-
+For Time Constraints, in GitHub only the jupyter notebooks are uploaded. You are requested to see the full project at this [🔗Google Drive Link](https://drive.google.com/drive/folders/1SvJXF7A3lMSy1PDGYzW7y6lzQOCihi-r).
+---
 ## 1. Executive Summary
 This project encompasses a rigorous attempt to fine-tune Mask2Former model for a custom instance segmentation task: identifying fallen trees from high-resolution aerial images. The project's main target was to establish a complete, end-to-end pipeline, from raw data processing to model training with Mask2Former, within a constrained computational environment.
 
@@ -152,6 +153,11 @@ Fine-tuning from ImageNet (photographs of everyday objects) may not be effective
 ---
 
 ## 7. Conclusion
-This project established a complete, end-to-end pipeline for a highly challenging segmentation task with Mask2Former. The primary achievement was the significant efforts required to process complex geospatial data and deploy a state-of-the-art model in a constrained environment.
+This project established a complete, end-to-end pipeline for a highly challenging segmentation task with Mask2Former.
 
-While the systematic fine-tuning and evaluation revealed the model failed to converge on this specific dataset, the experiment provided critical insights into the limitations of applying large transformer-based architectures to domain-specific, low-data problems.
+I began with basic deep learning knowledge with no prior experience in instance segmentation or Mask2Former frameworks. To bridge this gap, I dedicated significant effort to self-study, went through different theories, and tutorials. For troubleshooting and debugging, I took help from AI. Despite my knowledge gap on this task and constrained computational resources, I was able to complete this task starting from scratch. 
+
+While the final model did not converge on this challenging dataset, the experiment itself was a success. It demonstrated my ability to take a complex task from zero to a full, conclusive evaluation. The enthusiasm and resilience I applied to troubleshoot these difficulties have solidified my passion for this field.
+
+I believe this project reflects my self-motivation and persistence as a problem-solver. I am eager to bring these skills to a collaborative setting, as I am a strong, team-oriented worker. I am confident that within a competitive research environment under  proper guidance, my dedication and fast learning ability will allow me to make meaningful contributions as a researcher.
+
