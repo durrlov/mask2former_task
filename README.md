@@ -17,7 +17,7 @@ A key achievement of this project was the implementation and verification of the
 ### 1.1 Understanding the Problem
 We are given 15 aerial images (.tif) with corresponding .json files annotating the fallen trees. Our goal is to train a Mask2Former instance segmentation model to identify these fallen trees.
 
-![Problem Statement](image_for_report\problem_statement.png)
+![Problem Statement](image_for_report/problem_statement.png)
 ---
 
 ## 2. Data Engineering and Preprocessing Pipeline
@@ -50,7 +50,7 @@ The raw .tif images were too large, and the .json vector annotations needed to b
 - **Visualization:**
   - Displays a selected patch, its mask, and bounding boxes side by side for inspection.
 
-  ![Preprocessing](image_for_report\preprocess.png)
+  ![Preprocessing](image_for_report/preprocess.png)
 
 ---
 
@@ -70,7 +70,7 @@ The Mask2Former framework, via Detectron2, requires all training data to be in t
 - **Visualize**
   - Displays a sample image with bounding boxes and annotation info.
 
-  ![coco format](image_for_report\coco_format.png)
+  ![coco format](image_for_report/coco_format.png)
 
 ---
 
@@ -88,7 +88,7 @@ The COCO format .json files need to be accessible by the Detectron2 training fra
 - **Visualize samples**
   - Displays random images with annotations to confirm correctness.
 
-  ![registration](image_for_report\registration.png)
+  ![registration](image_for_report/registration.png)
 - **Print dataset statistics**
   - Counts images, instances, and area/instance distributions.
 - **Outputs**
@@ -153,7 +153,7 @@ Visual analysis confirmed the quantitative failure. Side-by-side comparisons of 
 ## 6. Hypothesis for Failure
 The initial smoke test training produced promising predictions based on the training data. However, during the full-scale model training, the final results showed no valid predictions, likely due to the training simulation was abruptly interrupted in Google Colab, which may have contributed to the issue.
 
-![comparison](image_for_report\comparison.png)
+![comparison](image_for_report/comparison.png)
 
 *Figure: (a) shows the results from the 100-iteration "smoke test." The model identifies objects, proving the end-to-end training and prediction pipeline is functional. The low-quality predictions (blue blobs) are expected from such a short training run; (b) shows sample results from the abruptly interrupted 30,000-iteration training run. Despite the successful "smoke test", the final model fails to detect any objects, indicating a problem with the full-scale training configuration.*
 
