@@ -163,10 +163,3 @@ Further debugging and optimization are required. With additional time and comput
 
 ## 7. Conclusion
 This project established a complete, end-to-end pipeline for a highly challenging segmentation task with Mask2Former.
-
-I began with basic deep learning knowledge with no prior experience in instance segmentation or Mask2Former frameworks. To bridge this gap, I dedicated significant effort to self-study, went through different theories, and tutorials. For troubleshooting and debugging, I took help from AI. Despite my knowledge gap on this task and constrained computational resources, I was able to complete this task starting from scratch. 
-
-While the final model did not converge on this challenging dataset, the experiment itself was a success. It demonstrated my ability to take a complex task from zero to a full, conclusive evaluation. The enthusiasm and resilience I applied to troubleshoot these difficulties have solidified my passion for this field.
-
-I believe this project reflects my self-motivation and persistence as a problem-solver. I am eager to bring these skills to a collaborative setting, as I am a strong, team-oriented worker. I am confident that within a competitive research environment under  proper guidance, my dedication and fast learning ability will allow me to make meaningful contributions as a researcher.
-
